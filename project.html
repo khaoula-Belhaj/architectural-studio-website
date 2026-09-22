@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Projet — KHAM Studio Design</title>
+  <link rel="icon" type="image/png" href="favicon.png?v=2">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Votre CSS existant -->
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* ═══════════════════════════════════════════════════════════════════
+       STYLES SPÉCIFIQUES PAGE PROJET
+    ═══════════════════════════════════════════════════════════════════ */
+    
+    .project-detail {
+      padding-top: 100px;
+      background: var(--color-bg, #0a0a0a);
+      min-height: 100vh;
+    }
+
+    /* Hero du projet */
+    .project-hero {
+      position: relative;
+      height: 85vh;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .project-hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+
+    .project-hero-content {
+      position: absolute;
+      bottom: 8%;
+      left: 5%;
+      max-width: 700px;
+      color: #f5f5f5;
+      z-index: 2;
+    }
+
+    .project-category {
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #d4af37;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .project-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.01em;
+    }
+
+    .project-hero-meta {
+      display: flex;
+      gap: 3rem;
+      font-size: 0.95rem;
+      color: rgba(245, 245, 245, 0.8);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* Informations du projet */
+    .project-info {
+      padding: 12vh 5%;
+      background: #1a1a1a;
+    }
+
+    .project-info-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .project-details {
+      position: sticky;
+      top: 150px;
+    }
+
+    .detail-section {
+      margin-bottom: 3rem;
+    }
+
+    .detail-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 0.8rem;
+      font-weight: 400;
+    }
+
+    .detail-value {
+      font-size: 1.1rem;
+      color: #f5f5f5;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    .project-description {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .project-description h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 400;
+      color: #f5f5f5;
+      line-height: 1.3;
+    }
+
+    .project-description p {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: rgba(245, 245, 245, 0.85);
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    /* Galerie */
+
+/* ═══════════════════════════════════════════════════════════════════
+   SECTION GALERIE DU PROJET
+═══════════════════════════════════════════════════════════════════ */
+
+.project-gallery {
+  padding: 12vh 5% 15vh;
+  background: #0a0a0a;
+}
+
+.gallery-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.gallery-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #f5f5f5;
+  margin-bottom: 6vh;
+  text-align: center;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   GRILLE DE GALERIE
+═══════════════════════════════════════════════════════════════════ */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ITEMS DE GALERIE (DÉFINITION UNIQUE)
+═══════════════════════════════════════════════════════════════════ */
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* ✅ RETIRÉ : aspect-ratio: 4/3 qui causait la bande blanche */
+  min-height: 300px; /* Hauteur minimale pour uniformité */
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   IMAGES DE GALERIE
+═══════════════════════════════════════════════════════════════════ */
+
+.gallery-item img {
+  display: block; /* ✅ CRITIQUE : Élimine l'espace blanc sous l'image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   WATERMARK - CENTRÉ SUR L'IMAGE
+═══════════════════════════════════════════════════════════════════ */
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  
+  /* Position centrée */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* Taille du watermark */
+  width: 200px;
+  height: 200px;
+  
+  /* ⚠️ Votre logo */
+  background-image: url('images/logo-removebg-preview.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* Style */
+  opacity: 1.4;
+  pointer-events: none;
+  z-index: 10;
+  
+  /* Animation au hover */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animation hover du watermark */
+.gallery-item:hover::after {
+  opacity: 0.6;
+  transform: translate(-50%, -50%) scale(1.05); /* Garde le centrage */
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   LABEL DE CATÉGORIE (optionnel)
+═══════════════════════════════════════════════════════════════════ */
+
+.gallery-item-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  z-index: 5;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE - TABLETTE
+═══════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .gallery-item {
+    min-height: 250px;
+  }
+  
+  .gallery-item::after {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE - MOBILE
+═══════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .project-gallery {
+    padding: 8vh 5%;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .gallery-item {
+    min-height: 250px;
+  }
+  
+  .gallery-item img {
+    height: 250px;
+  }
+  
+  .gallery-item::after {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE - TRÈS PETIT MOBILE
+═══════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 480px) {
+  .gallery-item {
+    min-height: 200px;
+  }
+  
+  .gallery-item img {
+    height: 200px;
+  }
+  
+  .gallery-item::after {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  opacity: 10;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+  display: flex;
+  opacity: 10;
+}
+
+/* ✅ CORRECTION : Ajout de position: relative pour le watermark */
+.lightbox-content {
+  position: relative; /* ← AJOUTÉ : Nécessaire pour le watermark absolu */
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* Boutons de navigation */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f5f5f5;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  backdrop-filter: blur(10px);
+  z-index: 10002; /* ✅ AJUSTÉ : Au-dessus du watermark */
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.lightbox-close {
+  top: 30px;
+  right: 30px;
+}
+
+.lightbox-prev {
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev:hover {
+  transform: translateY(-50%) scale(1.1); /* ✅ Garde le centrage vertical */
+}
+
+.lightbox-next {
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next:hover {
+  transform: translateY(-50%) scale(1.1); /* ✅ Garde le centrage vertical */
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f5f5f5;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  z-index: 10002; /* ✅ AJUSTÉ : Au-dessus du watermark */
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   3. RESPONSIVE - GALERIE + LIGHTBOX
+═══════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  
+  .lightbox-prev,
+  .lightbox-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .lightbox-prev {
+    left: 15px;
+  }
+
+  .lightbox-next {
+    right: 15px;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .lightbox-counter {
+    bottom: 20px;
+    font-size: 0.8rem;
+  }
+}
+
+
+    /* Navigation retour */
+    .back-navigation {
+      padding: 15vh 5% 5vh;
+      background: #0a0a0a;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 3rem;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #f5f5f5;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .back-link::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(212, 175, 55, 0.05);
+      transform: translateX(-100%);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .back-link:hover::before {
+      transform: translateX(0);
+    }
+
+    .back-link:hover {
+      border-color: #d4af37;
+      transform: translateY(-2px);
+    }
+
+    /* Loading state */
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #0a0a0a;
+    }
+
+    .loading-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #d4af37;
+      letter-spacing: 0.2em;
+    }
+.banter-loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 72px;
+  height: 72px;
+  margin-left: -36px;
+  margin-top: -36px;
+}
+
+.banter-loader__box {
+  float: left;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.banter-loader__box:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.banter-loader__box:nth-child(3n) {
+  margin-right: 0;
+  margin-bottom: 6px;
+}
+
+.banter-loader__box:nth-child(1):before, .banter-loader__box:nth-child(4):before {
+  margin-left: 26px;
+}
+
+.banter-loader__box:nth-child(3):before {
+  margin-top: 52px;
+}
+
+.banter-loader__box:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes moveBox-1 {
+  9.0909090909% {
+    transform: translate(-26px, 0);
+  }
+
+  18.1818181818% {
+    transform: translate(0px, 0);
+  }
+
+  27.2727272727% {
+    transform: translate(0px, 0);
+  }
+
+  36.3636363636% {
+    transform: translate(26px, 0);
+  }
+
+  45.4545454545% {
+    transform: translate(26px, 26px);
+  }
+
+  54.5454545455% {
+    transform: translate(26px, 26px);
+  }
+
+  63.6363636364% {
+    transform: translate(26px, 26px);
+  }
+
+  72.7272727273% {
+    transform: translate(26px, 0px);
+  }
+
+  81.8181818182% {
+    transform: translate(0px, 0px);
+  }
+
+  90.9090909091% {
+    transform: translate(-26px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.banter-loader__box:nth-child(1) {
+  animation: moveBox-1 8s infinite;
+}
+
+@keyframes moveBox-2 {
+  9.0909090909% {
+    transform: translate(0, 0);
+  }
+
+  18.1818181818% {
+    transform: translate(26px, 0);
+  }
+
+  27.2727272727% {
+    transform: translate(0px, 0);
+  }
+
+  36.3636363636% {
+    transform: translate(26px, 0);
+  }
+
+  45.4545454545% {
+    transform: translate(26px, 26px);
+  }
+
+  54.5454545455% {
+    transform: translate(26px, 26px);
+  }
+
+  63.6363636364% {
+    transform: translate(26px, 26px);
+  }
+
+  72.7272727273% {
+    transform: translate(26px, 26px);
+  }
+
+  81.8181818182% {
+    transform: translate(0px, 26px);
+  }
+
+  90.9090909091% {
+    transform: translate(0px, 26px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.banter-loader__box:nth-child(2) {
+  animation: moveBox-2 4s infinite;
+}
+
+@keyframes moveBox-3 {
+  9.0909090909% {
+    transform: translate(-26px, 0);
+  }
+
+  18.1818181818% {
+    transform: translate(-26px, 0);
+  }
+
+  27.2727272727% {
+    transform: translate(0px, 0);
+  }
+
+  36.3636363636% {
+    transform: translate(-26px, 0);
+  }
+
+  45.4545454545% {
+    transform: translate(-26px, 0);
+  }
+
+  54.5454545455% {
+    transform: translate(-26px, 0);
+  }
+
+  63.6363636364% {
+    transform: translate(-26px, 0);
+  }
+
+  72.7272727273% {
+    transform: translate(-26px, 0);
+  }
+
+  81.8181818182% {
+    transform: translate(-26px, -26px);
+  }
+
+  90.9090909091% {
+    transform: translate(0px, -26px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.banter-loader__box:nth-child(3) {
+  animation: moveBox-3 4s infinite;
+}
+
+@keyframes moveBox-4 {
+  9.0909090909% {
+    transform: translate(-26px, 0);
+  }
+
+  18.1818181818% {
+    transform: translate(-26px, 0);
+  }
+
+  27.2727272727% {
+    transform: translate(-26px, -26px);
+  }
+
+  36.3636363636% {
+    transform: translate(0px, -26px);
+  }
+
+  45.4545454545% {
+    transform: translate(0px, 0px);
+  }
+
+  54.5454545455% {
+    transform: translate(0px, -26px);
+  }
+
+  63.6363636364% {
+    transform: translate(0px, -26px);
+  }
+
+  72.7272727273% {
+    transform: translate(0px, -26px);
+  }
+
+  81.8181818182% {
+    transform: translate(-26px, -26px);
+  }
+
+  90.9090909091% {
+    transform: translate(-26px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.banter-loader__box:nth-child(4) {
+  animation: moveBox-4 4s infinite;
+}
+
+@keyframes moveBox-5 {
+  9.0909090909% {
+    transform: translate(0, 0);
+  }
+
+  18.1818181818% {
+    transform: translate(0, 0);
+  }
+
+  27.2727272727% {
+    transform: translate(0, 0);
+  }
+
+  36.3636363636% {
+    transform: translate(26px, 0);
+  }
+
+  45.4545454545% {
+    transform: translate(26px, 0);
+  }
+
+  54.5454545455% {
+    transform: translate(26px, 0);
+  }
+
+  63.6363636364% {
+    transform: translate(26px, 0);
+  }
+
+  72.7272727273% {
+    transform: translate(26px, 0);
+  }
+
+  81.8181818182% {
+    transform: translate(26px, -26px);
+  }
+
+  90.9090909091% {
+    transform: translate(0px, -26px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.banter-loader__box:nth-child(5) {
+  animation: moveBox-5 4s infinite;
+}
+
+@keyframes moveBox-6 {
+  9.0909090909% {
+    transform: translate(0, 0);
+  }
+
+  18.1818181818% {
+    transform: translate(-26px, 0);
+  }
+
+  27.2727272727% {
+    transform: translate(-26px, 0);
+  }
+
+  36.3636363636% {
+    transform: translate(0px, 0);
+  }
+
+  45.4545454545% {
+    transform: translate(0px, 0);
+  }
+
+  54.5454545455% {
+    transform: translate(0px, 0);
+  }
+
+  63.6363636364% {
+    transform: translate(0px, 0);
+  }
+
+  72.7272727273% {
+    transform: translate(0px, 26px);
+  }
+
+  81.8181818182% {
+    transform: translate(-26px, 26px);
+  }
+
+  90.9090909091% {
+    transform: translate(-26px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.banter-loader__box:nth-child(6) {
+  animation: moveBox-6 4s infinite;
+}
+
+@keyframes moveBox-7 {
+  9.0909090909% {
+    transform: translate(26px, 0);
+  }
+
+  18.1818181818% {
+    transform: translate(26px, 0);
+  }
+
+  27.2727272727% {
+    transform: translate(26px, 0);
+  }
+
+  36.3636363636% {
+    transform: translate(0px, 0);
+  }
+
+  45.4545454545% {
+    transform: translate(0px, -26px);
+  }
+
+  54.5454545455% {
+    transform: translate(26px, -26px);
+  }
+
+  63.6363636364% {
+    transform: translate(0px, -26px);
+  }
+
+  72.7272727273% {
+    transform: translate(0px, -26px);
+  }
+
+  81.8181818182% {
+    transform: translate(0px, 0px);
+  }
+
+  90.9090909091% {
+    transform: translate(26px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.banter-loader__box:nth-child(7) {
+  animation: moveBox-7 4s infinite;
+}
+
+@keyframes moveBox-8 {
+  9.0909090909% {
+    transform: translate(0, 0);
+  }
+
+  18.1818181818% {
+    transform: translate(-26px, 0);
+  }
+
+  27.2727272727% {
+    transform: translate(-26px, -26px);
+  }
+
+  36.3636363636% {
+    transform: translate(0px, -26px);
+  }
+
+  45.4545454545% {
+    transform: translate(0px, -26px);
+  }
+
+  54.5454545455% {
+    transform: translate(0px, -26px);
+  }
+
+  63.6363636364% {
+    transform: translate(0px, -26px);
+  }
+
+  72.7272727273% {
+    transform: translate(0px, -26px);
+  }
+
+  81.8181818182% {
+    transform: translate(26px, -26px);
+  }
+
+  90.9090909091% {
+    transform: translate(26px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.banter-loader__box:nth-child(8) {
+  animation: moveBox-8 4s infinite;
+}
+
+@keyframes moveBox-9 {
+  9.0909090909% {
+    transform: translate(-26px, 0);
+  }
+
+  18.1818181818% {
+    transform: translate(-26px, 0);
+  }
+
+  27.2727272727% {
+    transform: translate(0px, 0);
+  }
+
+  36.3636363636% {
+    transform: translate(-26px, 0);
+  }
+
+  45.4545454545% {
+    transform: translate(0px, 0);
+  }
+
+  54.5454545455% {
+    transform: translate(0px, 0);
+  }
+
+  63.6363636364% {
+    transform: translate(-26px, 0);
+  }
+
+  72.7272727273% {
+    transform: translate(-26px, 0);
+  }
+
+  81.8181818182% {
+    transform: translate(-52px, 0);
+  }
+
+  90.9090909091% {
+    transform: translate(-26px, 0);
+  }
+
+  100% {
+    transform: translate(0px, 0);
+  }
+}
+
+.banter-loader__box:nth-child(9) {
+  animation: moveBox-9 4s infinite;
+}
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .project-info-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+
+      .project-details {
+        position: static;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .project-hero {
+        height: 60vh;
+      }
+
+      .project-hero-content {
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+      }
+
+      .project-hero-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .project-info {
+        padding: 8vh 5%;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+     
+    }
+  </style>
+</head>
+<body>
+
+   <!-- Navigation -->
+  <header class="header">
+    
+    <nav class="nav container">
+      <a href="index.html" class="logo">KHAM</a>
+
+      <div class="nav-links">
+        <a href="projets.html" class="nav-link" data-key="navProjets">Projets</a>
+        <a href="agence.html"   class="nav-link" data-key="navAgence">Agence</a>
+        <a href="contact.html"  class="nav-link" data-key="navContact">Contact</a>
+      </div>
+
+      
+      <!-- Burger (mobile) -->
+      <button class="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    
+    </nav>
+  </header>
+
+  <!-- Loading State -->
+  <div class="loading" id="loading">
+    <p class="loading-text"></p>
+    <div class="banter-loader">
+  <div class="banter-loader__box"></div>
+  <div class="banter-loader__box"></div>
+  <div class="banter-loader__box"></div>
+  <div class="banter-loader__box"></div>
+  <div class="banter-loader__box"></div>
+  <div class="banter-loader__box"></div>
+  <div class="banter-loader__box"></div>
+  <div class="banter-loader__box"></div>
+  <div class="banter-loader__box"></div>
+</div>
+  </div>
+
+  <!-- Contenu du projet (sera rempli dynamiquement) -->
+  <div class="project-detail" id="projectDetail" style="display: none;">
+    
+    <!-- Hero -->
+    <section class="project-hero">
+      <img id="heroImage" src="" alt="" class="project-hero-image">
+      
+      <div class="project-hero-content">
+        <div class="project-category" id="projectCategory"></div>
+        <h1 class="project-hero-title" id="projectTitle"></h1>
+        <div class="project-hero-meta">
+          <span id="projectLocation"></span>
+          <span id="projectYear"></span>
+          <span id="projectType"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Informations -->
+    <section class="project-info">
+      <div class="project-info-container">
+        
+        <!-- Détails -->
+        <aside class="project-details">
+          <div class="detail-section">
+            <div class="detail-label">Lieu</div>
+            <div class="detail-value" id="detailLocation"></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Année</div>
+            <div class="detail-value" id="detailYear"></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Type</div>
+            <div class="detail-value" id="detailType"></div>
+          </div>
+          
+          <div class="detail-section" id="missionSection" style="display: none;">
+            <div class="detail-label">Mission</div>
+            <div class="detail-value" id="detailMission"></div>
+          </div>
+        </aside>
+
+        <!-- Description -->
+        <div class="project-description">
+          <h3 id="descriptionTitle"></h3>
+          <div id="descriptionContent"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Galerie -->
+    <section class="project-gallery">
+      <div class="gallery-container">
+        <h2 class="gallery-title">Galerie du Projet</h2>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- Navigation retour -->
+    <section class="back-navigation">
+      <a href="projets.html" class="back-link">
+        <span>←</span>
+        <span>Retour aux Projets</span>
+      </a>
+    </section>
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="" class="lightbox-image">
+      <button class="lightbox-close" id="lightboxClose">×</button>
+      <button class="lightbox-prev" id="lightboxPrev">‹</button>
+      <button class="lightbox-next" id="lightboxNext">›</button>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+  </div>
+
+  <!-- Footer (votre footer existant) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-manifesto">
+        <p class="manifesto-text">
+          Nous construisons l'invisible.<br>
+          Chaque projet est une conversation entre l'espace et ceux qui l'habitent.
+        </p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-grid">
+        <div class="footer-col footer-studio">
+          <h3 class="footer-title">KHAM Studio Design</h3>
+          <p class="footer-tagline">Architecture • Intérieur • Design</p>
+          <div class="footer-locations">
+            <div class="location-item">
+              <span class="location-pin">⚬</span>
+              <span>Meknès, Maroc</span>
+            </div>
+            <div class="location-item">
+              <span class="location-pin">⚬</span>
+              <span>Casablanca</span>
+            </div>
+          </div>
+          <p class="footer-availability">
+            <span class="availability-dot"></span>
+            Disponible pour nouveaux projets
+          </p>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4 class="footer-subtitle">Contact</h4>
+          <div class="contact-list">
+            <a href="mailto:khamstudiodesigner@gmail.com" class="contact-item">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">khamstudiodesigner@gmail.com</span>
+            </a>
+            <a href="tel:+212777222400" class="contact-item">
+              <span class="contact-label">Téléphone</span>
+              <span class="contact-value">+212 777 222 400</span>
+            </a>
+          </div>
+          <p class="footer-timezone">GMT+1 • Lun–Ven, 9h–18h</p>
+        </div>
+        <div class="footer-col footer-nav">
+          <h4 class="footer-subtitle">Explorer</h4>
+          <nav class="footer-links">
+            <a href="projets.html" class="footer-link">Réalisations</a>
+            <a href="agence.html" class="footer-link">L'Agence</a>
+            <a href="index.html#services" class="footer-link">Services</a>
+            <a href="contact.html" class="footer-link">Nous Contacter</a>
+          </nav>
+        </div>
+        <div class="footer-col footer-social-col">
+          <h4 class="footer-subtitle">Suivez-nous</h4>
+          <div class="social">
+            <a href="mailto:khamstudiodesigner@gmail.com" class="social-link email" target="_blank">
+              <i class="fas fa-envelope"></i>
+              <span class="tooltip">Email</span>
+            </a>
+            <a href="tel:+212777222400" class="social-link phone" target="_blank">
+              <i class="fas fa-phone"></i>
+              <span class="tooltip">Téléphone</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mariyem-belhaj-415923227" class="social-link" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+              <span class="tooltip">LinkedIn</span>
+            </a>
+            <a href="https://www.facebook.com/share/1Fn6iz4RuW" class="social-link" target="_blank">
+              <i class="fab fa-facebook"></i>
+              <span class="tooltip">Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/kham_studiodesign" class="social-link" target="_blank">
+              <i class="fab fa-instagram"></i>
+              <span class="tooltip">Instagram</span>
+            </a>
+            <a href="https://wa.me/212777222400" class="social-link whatsapp" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+              <span class="tooltip">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider footer-divider-bottom"></div>
+      <div class="footer-legal">
+        <div class="legal-left">
+          <p class="copyright">© 2026 KHAM Studio Design. Tous droits réservés.</p>
+          <div class="legal-links">
+            <a href="legal.html#mentions-legales" class="legal-link">Mentions Légales</a>
+            <span class="legal-separator">•</span>
+            <a href="legal.html#confidentialite" class="legal-link">Confidentialité</span>
+          </div>
+        </div>
+        <div class="legal-right">
+          <p class="legal-credit">Conçu avec intention</p>
+        </div>
+      </div>
+      <div class="footer-dev-credit">
+        <p class="dev-text">
+          Site web conçu et développé par 
+          <a href="https://www.instagram.com/hepburn_studio_" target="_blank" class="dev-name">Hepburn Studio</a>
+        </p>
+      </div>
+      <div class="footer-closing">
+        <p class="closing-message">L'architecture est une langue. Écoutons-la ensemble.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+    
+  <script src="projectsData.js"></script>
+  <script src="project.js"></script>
+    <script src="mobile.js"></script>
+  <script>
+    // ═══════════════════════════════════════════════════════════════════
+// MENU BURGER (si nécessaire pour mobile)
+// ═══════════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (!burger || !navLinks) return;
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+});
+  </script>
+
+
+<button id="scrollToTop" class="scroll-to-top" aria-label="Retour en haut">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// BOUTON RETOUR EN HAUT — Logique JavaScript
+// ═══════════════════════════════════════════════════════════════════
+
+(function() {
+  'use strict';
+
+  // ═══════════════════════════════════════════════════════════════
+  // CONFIGURATION
+  // ═══════════════════════════════════════════════════════════════
+  
+  const CONFIG = {
+    // Seuil de déclenchement : afficher le bouton après 300px de scroll
+    scrollThreshold: 300,
+    
+    // Durée du scroll animé (ms)
+    scrollDuration: 800,
+    
+    // Fonction d'easing pour le scroll (courbe de bezier personnalisée)
+    easingFunction: (t) => t < 0.5 
+      ? 4 * t * t * t 
+      : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
+  };
+
+  // ═══════════════════════════════════════════════════════════════
+  // SÉLECTION DES ÉLÉMENTS DOM
+  // ═══════════════════════════════════════════════════════════════
+  
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  // Vérification de l'existence du bouton
+  if (!scrollToTopBtn) {
+    console.warn('Bouton scroll-to-top introuvable. Vérifiez que l\'ID est correct.');
+    return;
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FONCTION : Afficher/Masquer le bouton selon le scroll
+  // ═══════════════════════════════════════════════════════════════
+  
+  function toggleButtonVisibility() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollPosition > CONFIG.scrollThreshold) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FONCTION : Scroll fluide vers le haut (natif avec fallback custom)
+  // ═══════════════════════════════════════════════════════════════
+  
+  function smoothScrollToTop() {
+    // Méthode moderne (supportée par la plupart des navigateurs récents)
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // Fallback : animation personnalisée pour navigateurs anciens
+      customSmoothScroll();
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FONCTION : Animation personnalisée de scroll (fallback)
+  // ═══════════════════════════════════════════════════════════════
+  
+  function customSmoothScroll() {
+    const startPosition = window.pageYOffset;
+    const startTime = performance.now();
+    
+    function animation(currentTime) {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / CONFIG.scrollDuration, 1);
+      const easing = CONFIG.easingFunction(progress);
+      
+      window.scrollTo(0, startPosition * (1 - easing));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    }
+    
+    requestAnimationFrame(animation);
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // EVENT LISTENERS
+  // ═══════════════════════════════════════════════════════════════
+  
+  // Détection du scroll avec throttle pour performance
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    
+    scrollTimeout = window.requestAnimationFrame(function() {
+      toggleButtonVisibility();
+    });
+  }, { passive: true });
+
+  // Clic sur le bouton
+  scrollToTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    smoothScrollToTop();
+  });
+
+  // ═══════════════════════════════════════════════════════════════
+  // INITIALISATION
+  // ═══════════════════════════════════════════════════════════════
+  
+  // Vérifier la position initiale au chargement
+  toggleButtonVisibility();
+
+  // Accessibilité : support clavier
+  scrollToTopBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      smoothScrollToTop();
+    }
+  });
+
+})();
+</script>
+</body>
+</html>

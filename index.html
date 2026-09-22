@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KHAM STUDIO DESIGN — Construire l'invisible</title>
+  <link rel="icon" type="image/png" href="favicon.png?v=2">
+  <!-- icons links social -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- Notre fichier CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+
+<body>
+  <!-- Navigation -->
+  <header class="header">
+    
+    <nav class="nav container">
+      <a href="index.html" class="logo">KHAM</a>
+
+      <div class="nav-links">
+        <a href="projets.html" class="nav-link" data-key="navProjets">Projets</a>
+        <a href="agence.html"   class="nav-link" data-key="navAgence">Agence</a>
+        <a href="contact.html"  class="nav-link" data-key="navContact">Contact</a>
+      </div>
+
+      
+      <!-- Burger (mobile) -->
+      <button class="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-slider">
+        <div class="hero-track">
+            <div class="slide-card" data-full="images/salon/7.png" style="background-image: url('images/salon/7.png');" loading="lazy">
+                <div class="slide-info">
+                    <div class="slide-title"><img src="images/image_2026-01-23_042129358-removebg-preview.png" alt="Logo KHAM Studio Design" loading="lazy"></div>
+                    
+    
+                </div>
+            </div>
+            <div class="slide-card" data-full="images/modern/131.png" style="background-image: url('images/modern/131.png');" loading="lazy">
+                <div class="slide-info">
+                    <div class="slide-title"><img src="images/image_2026-01-23_042129358-removebg-preview.png" alt="Logo KHAM Studio Design" loading="lazy"></div>
+              </div>      
+            </div>
+            <div class="slide-card" data-full="images/plan/2.jpeg" style="background-image: url('images/plan/2.jpeg');" loading="lazy">
+                <div class="slide-info">
+                   <div class="slide-title"><img src="images/image_2026-01-23_042129358-removebg-preview.png" alt="Logo KHAM Studio Design" loading="lazy"></div>
+                    
+            </div>
+            </div>
+
+            <div class="slide-card" data-full="images/chambre/15.jpeg" style="background-image: url('images/chambre/15.jpeg');" loading="lazy">
+                <div class="slide-info">
+                 <div class="slide-title"><img src="images/image_2026-01-23_042129358-removebg-preview.png" alt="Logo KHAM Studio Design" loading="lazy"></div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-buttons">
+            <button class="slide-btn prev-slide"><i class="fa-solid fa-chevron-left" style="color: rgb(0, 0, 0);"></i></button>
+            <button class="slide-btn next-slide"><i class="fa-solid fa-chevron-right" style="color: black;"></i></button>
+        </div>
+       
+    </div>
+
+    <script src="slider.js"></script>
+  
+  </section>
+
+
+
+<!-- === NOUVELLE SECTION SERVICES === -->
+<section class="services" id="services">
+  <div class="container">
+    <h2 data-key="servicesTitle">Nos Services</h2><section class="closure">
+    <div class="closure-container">
+      <p class="closure-text">
+      Du concept à la réalisation, nous accompagnons chaque étape avec précision et exigence.
+    </p>
+    </div>
+    </section>
+
+    <div class="services-grid">
+      <!-- Carte 1 -->
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('images/villa/1.png');" loading="lazy"></div>
+        <div class="service-overlay">
+          <h3>Architecture & Conception</h3>
+          <p>Création sur mesure de résidences, villas, hôtels et espaces commerciaux d’exception.</p>
+          <a href="agence.html" class="btn-more">En savoir plus</a>
+        </div>
+      </div>
+
+      <!-- Carte 2 -->
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('images/salon/121.png');" loading="lazy"></div>
+        <div class="service-overlay">
+          <h3>Design d’intérieur</h3>
+          <p>Aménagement haut de gamme, choix de matériaux nobles et jeux de lumière raffinés.</p>
+          <a href="agence.html" class="btn-more">En savoir plus</a>
+        </div>
+      </div>
+
+      <!-- Carte 3 -->
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('images/modern/10.jpeg');" loading="lazy"></div>
+        <div class="service-overlay">
+          <h3>Finition clé en main</h3>
+          <p>Confiez-nous vos clés et laissez la magie opérer : nous orchestrons chaque détail technique et esthétique pour vous livrer un espace prêt à être habité.</p>
+          <a href="agence.html" class="btn-more">En savoir plus</a>
+        </div>
+      </div>
+
+      <!-- Carte 4 -->
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('images/chantier/suivi.jpeg');" loading="lazy"></div>
+        <div class="service-overlay">
+          <h3>Suivi de chantier</h3>
+          <p>Coordination complète des travaux pour une exécution fidèle à la vision initiale.</p>
+          <a href="agence.html" class="btn-more">En savoir plus</a>
+        </div>
+      </div>
+
+      <!-- Tu peux en ajouter 2 ou 3 de plus si besoin -->
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Réalisations -->
+  <section id="projets" class="section-real">
+    <div class="container">
+      <h2>Réalisations</h2>
+      <div class="main">
+        <div class="main_back"></div>
+        
+        <div class="main-image-container">
+          
+          <img src="images/salon/20.jpeg" class="main-photo" alt="Cover" loading="lazy">
+      </div>
+            <div class="carde"><img src="images/cuisine/127.jpeg" alt="Social 1" loading="lazy"></div>
+            <div class="carde"><img src="images/douche/2.png" alt="Social 2" loading="lazy"></div>
+            <div class="carde"><img src="images/douche/5.png" alt="Social 3" loading="lazy"></div>
+            <div class="carde"><img src="images/chambre/123.png" alt="Social 4" loading="lazy"></div>
+            <div class="carde"><img src="images/chambre/121.png" alt="Social 5" loading="lazy"></div>
+            <div class="carde"><img src="images/chambre/19.jpeg" alt="Social 6" loading="lazy"></div>
+            <div class="carde"><img src="images/modern/13.png" alt="Social 7" loading="lazy"></div>
+            <div class="carde"><img src="images/salon/23.jpeg" alt="Social 8" loading="lazy"></div>
+            <div class="carde"><img src="images/plan/33.jpeg" alt="Social 9" loading="lazy"></div> 
+    </div>
+    <div class="gallery-description">
+      <section class="closure">
+    <div class="closure-container">
+      <p class="closure-text">
+     
+        Chaque réalisation est le fruit d’une réflexion profonde sur l’harmonie entre lumière, matière et émotion.
+        <br><br>Nous concevons des espaces qui respirent le calme, où chaque détail raconte une histoire d’élégance intemporelle et de raffinement discret.
+      <br><br>
+        Du choix des textures naturelles aux jeux subtils d’éclairage, nos projets célèbrent l’équilibre parfait entre esthétique contemporaine et confort absolu.
+      
+    </div>
+    
+    </section>
+    </div>
+    
+    </section>
+  <!-- ANCRAGE -->
+    <section class="ancrage">
+      <div class="ancrage__ligne"></div>
+      <div class="ancrage__carte">
+        <div class="lieu">
+          <div class="lieu__point"></div>
+          <div class="lieu__nom">Meknès</div>
+        </div>
+        <div class="lieu">
+          <div class="lieu__point"></div>
+          <div class="lieu__nom">Rabat</div>
+        </div>
+        <div class="lieu">
+          <div class="lieu__point"></div>
+          <div class="lieu__nom">Casablanca</div>
+        </div>
+        <div class="lieu">
+          <div class="lieu__point"></div>
+          <div class="lieu__nom">Marrakech</div>
+        </div>
+        <div class="lieu">
+          <div class="lieu__point"></div>
+          <div class="lieu__nom">Tanger</div>
+        </div>
+      </div>
+      <p class="territory-statement">
+      Enracinés au Maroc<br>
+      Ouverts au monde
+    </p>
+    </section>
+
+  <!-- Philosophie -->
+  <section id="agence" class="section-philo">
+    <div class="container text-center">
+      <h2>Philosophie</h2><section class="closure">
+    <div class="closure-container">
+      <p class="closure-text">Nous croyons que l’architecture la plus puissante est celle qui disparaît au profit de l’expérience.
+        <br><br>Nos projets naissent d’un dialogue permanent entre le lieu, <br>la lumière naturelle et les besoins intimes de ceux qui y vivent.
+        </p><p class="closure-text closure-final">Nous construisons l’invisible : <br>l’émotion, le calme, l’intemporalité.</p>
+      </div>
+      </section>
+    </div>
+
+
+
+
+  <!-- Approche — Narration par étapes invisibles -->
+  <section class="approach">
+    <div class="approach-intro">
+      <p class="approach-label">Notre méthode</p>
+    </div>
+
+    <div class="approach-phases">
+      
+      <!-- Phase 1 -->
+      <div class="phase">
+        <div class="phase-number">01</div>
+        <div class="phase-content">
+          <h3 class="phase-title">Écoute</h3>
+          <p class="phase-text">
+            Nous commençons par le vide. Observer le terrain à différentes heures. 
+            Sentir les flux, comprendre les contraintes non comme des limites, 
+            mais comme des opportunités de création.
+          </p>
+        </div>
+        <div class="phase-visual">
+          <div class="visual-line"></div>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="phase">
+        <div class="phase-number">02</div>
+        <div class="phase-content">
+          <h3 class="phase-title">Dialogue</h3>
+          <p class="phase-text">
+            Vos besoins ne sont jamais simplement fonctionnels. Ils portent des désirs, 
+            des habitudes, des rêves. Nous les traduisons en langage spatial — 
+            volumes, matières, passages de lumière.
+          </p>
+        </div>
+        <div class="phase-visual">
+          <div class="visual-line"></div>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="phase">
+        <div class="phase-number">03</div>
+        <div class="phase-content">
+          <h3 class="phase-title">Cristallisation</h3>
+          <p class="phase-text">
+            Le concept émerge. Pas comme une idée imposée, mais comme une évidence 
+            partagée. Chaque décision — un matériau, une ouverture, une proportion — 
+            découle de cette intention première.
+          </p>
+        </div>
+        <div class="phase-visual">
+          <div class="visual-line"></div>
+        </div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="phase">
+        <div class="phase-number">04</div>
+        <div class="phase-content">
+          <h3 class="phase-title">Réalisation</h3>
+          <p class="phase-text">
+            La construction n'est pas une exécution. C'est une conversation continue 
+            avec la matière, les artisans, la lumière réelle. Nous accompagnons 
+            chaque détail jusqu'à ce que l'espace vive.
+          </p>
+        </div>
+        <div class="phase-visual">
+          <div class="visual-line"></div>
+        </div>
+      </div>
+
+    </div>
+    <script src="slider.js"></script>
+  </section>
+
+  <!-- Présence suggérée — Images fragmentées -->
+  <section class="presence">
+    <div class="presence-intro">
+      <p class="presence-statement">
+        Une équipe.<br>
+        Architectes, designers, artisans.<br>
+        Tous guidés par la même obsession.
+      </p>
+    </div>
+    
+    <div class="presence-mosaic">
+      <div class="mosaic-item">
+        <img src="images/plan/3.jpeg" alt="" loading="lazy">
+        <div class="mosaic-label">Conception</div>
+      </div>
+      <div class="mosaic-item">
+        <img src="images/materiel.png" alt="" loading="lazy">
+        <div class="mosaic-label">Matière</div>
+      </div>
+      <div class="mosaic-item">
+        <img src="images/cafe/1.png" alt="" loading="lazy">
+        <div class="mosaic-label">Détail</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valeurs par négation -->
+  <section class="values">
+    <div class="values-container">
+      <div class="value-item">
+        <span class="value-dash">—</span>
+        <p class="value-text">Pas de style imposé. Chaque projet trouve sa propre langue.</p>
+      </div>
+      
+      <div class="value-item">
+        <span class="value-dash">—</span>
+        <p class="value-text">Pas de mode. Nous créons des espaces qui traversent le temps.</p>
+      </div>
+      
+      <div class="value-item">
+        <span class="value-dash">—</span>
+        <p class="value-text">Pas de standardisation. L'excellence est dans le détail unique.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusion invisible -->
+  <section class="closure">
+    <div class="closure-container">
+      <p class="closure-text">
+        Si vous cherchez des certitudes,<br>
+        nous ne sommes peut-être pas faits pour travailler ensemble.
+      </p>
+      <p class="closure-text closure-final">
+        Mais si vous cherchez l'essentiel,<br>
+        commençons le dialogue.
+      </p>
+    </div>
+  </section>
+<section class="fermeture">
+      <a href="https://wa.me/212777222400?text=Bonjour%20KhamStudio%20Design%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." class="fermeture__lien">
+       <span>Parlons de votre projet</span>
+        <span class="fermeture__fleche">→</span>
+      </a>
+    </section>
+ 
+
+ 
+
+  </section>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Manifeste / Signature éditoriale -->
+    <div class="footer-manifesto">
+      <p class="manifesto-text">
+        Nous construisons l'invisible.<br>
+        Chaque projet est une conversation entre l'espace et ceux qui l'habitent.
+      </p>
+    </div>
+
+    <!-- Séparateur visuel subtil -->
+    <div class="footer-divider"></div>
+
+    <!-- Grille principale du footer -->
+    <div class="footer-grid">
+      
+      <!-- Colonne 1 : Studio & Identité -->
+      <div class="footer-col footer-studio">
+        <h3 class="footer-title">KHAM Studio Design</h3>
+        <p class="footer-tagline">Architecture • Intérieur • Design</p>
+        
+        <div class="footer-locations">
+          <div class="location-item">
+            <span class="location-pin">⚬</span>
+            <span>Meknès, Maroc</span>
+          </div>
+          <div class="location-item">
+            <span class="location-pin">⚬</span>
+            <span>Casablanca</span>
+          </div>
+        </div>
+
+        <p class="footer-availability">
+          <span class="availability-dot"></span>
+          Disponible pour nouveaux projets
+        </p>
+      </div>
+
+      <!-- Colonne 2 : Contact enrichi -->
+      <div class="footer-col footer-contact">
+        <h4 class="footer-subtitle">Contact</h4>
+        
+        <div class="contact-list">
+          <a href="mailto:contact@kham.studio" class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">khamstudiodesigner@gmail.com</span>
+          </a>
+          
+          <a href="tel:+212777222400" class="contact-item">
+            <span class="contact-label">Téléphone</span>
+            <span class="contact-value">+212 777 222 400</span>
+          </a>
+        </div>
+
+        <p class="footer-timezone">GMT+1 • Lun–Ven, 9h–18h</p>
+      </div>
+
+      <!-- Colonne 3 : Navigation secondaire -->
+      <div class="footer-col footer-nav">
+        <h4 class="footer-subtitle">Explorer</h4>
+        
+        <nav class="footer-links">
+          <a href="projets.html" class="footer-link">Réalisations</a>
+          <a href="agence.html" class="footer-link">L'Agence</a>
+          <a href="index.html#services" class="footer-link">Services</a>
+          <a href="contact.html" class="footer-link">Nous Contacter</a>
+        </nav>
+      </div>
+
+      <!-- Colonne 4 : Réseaux sociaux (CONSERVÉS) -->
+      <div class="footer-col footer-social-col">
+        <h4 class="footer-subtitle">Suivez-nous</h4>
+        
+        <div class="social">
+          <!-- VOS ICÔNES EXISTANTES - Ne pas modifier -->
+           <a href="mailto:khamstudiodesigner@gmail.com?subject=Demande%20de%20renseignements" class="social-link email" aria-label="Email" target="_blank">
+        <i class="fas fa-envelope"></i>
+        <span class="tooltip">Email</span>
+      </a>
+      <a href="tel:+212777222400" class="social-link phone" aria-label="Téléphone" target="_blank">
+        <i class="fas fa-phone"></i>
+        <span class="tooltip">Téléphone</span>
+      </a>
+      <!-- Liens sociaux avec icons Font Awesome (assure-toi que FA est chargé dans <head>) -->
+      <a href="https://www.linkedin.com/in/mariyem-belhaj-415923227" class="social-link" aria-label="LinkedIn" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+        <span class="tooltip">linkedin</span>
+      </a>
+      
+      <a href="https://www.facebook.com/share/1Fn6iz4RuW/?mibextid=wwXIfr" class="social-link" aria-label="Facebook" target="_blank">
+        <i class="fab fa-facebook"></i>
+        <span class="tooltip">Facebook</span>
+      </a>
+      
+      <a href="https://www.instagram.com/kham_studiodesign?igsh=MXcybno0YnI0OGNoMg%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram" target="_blank">
+        <i class="fab fa-instagram"></i>
+        <span class="tooltip">Instagram</span>
+      </a>
+      
+      <a href="https://wa.me/212777222400?text=Bonjour%20KhamStudio%20Design%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." class="social-link whatsapp" aria-label="WhatsApp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">WhatsApp</span>
+      </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Séparateur visuel subtil -->
+    <div class="footer-divider footer-divider-bottom"></div>
+
+    <!-- Barre légale & crédits -->
+    <div class="footer-legal">
+      <div class="legal-left">
+        <p class="copyright">© 2026 KHAM Studio Design. Tous droits réservés.</p>
+        <div class="legal-links">
+          <a href="legal.html#mentions-legales" class="legal-link">Mentions Légales</a>
+          <span class="legal-separator">•</span>
+          <a href="legal.html#confidentialite" class="legal-link">Confidentialité</a>
+        </div>
+      </div>
+      
+      <div class="legal-right">
+        <p class="legal-credit">Conçu avec intention</p>
+      </div>
+    </div>
+    <div class="footer-dev-credit">
+  <p class="dev-text">
+    Site web conçu et développé par 
+    <a href="https://www.instagram.com/hepburn_studio_?igsh=MXcybno0YnI0OGNoMg%3D%3D&utm_source=qr" target="_blank" class="dev-name">Hepburn Studio</a>
+  </p>
+</div>
+    <!-- Message de fin (optionnel mais puissant) -->
+    <div class="footer-closing">
+      <p class="closing-message">L'architecture est une langue. Écoutons-la ensemble.</p>
+    </div>
+
+  </div>
+</footer>
+
+
+
+<script>
+  /*.......HERO.......*/
+const track = document.querySelector('.hero-track');
+const cards = document.querySelectorAll('.slide-card');
+const prevBtn = document.querySelector('.prev-slide');
+const nextBtn = document.querySelector('.next-slide');
+
+
+let autoTimer;
+
+
+function nextSlide() {
+  track.appendChild(track.firstElementChild);
+  updateActive();
+}
+
+function prevSlide() {
+  track.prepend(track.lastElementChild);
+  updateActive();
+}
+
+function updateActive() {
+  cards.forEach(card => card.removeAttribute('data-active'));
+  track.firstElementChild.setAttribute('data-active', 'true');
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+// Auto toutes les 5 secondes + reset timer au clic
+function startAuto() {
+  clearInterval(autoTimer);
+  autoTimer = setInterval(nextSlide, 5000);
+}
+
+
+startAuto();
+
+// Animation d'apparition au scroll (optionnel)
+document.addEventListener('DOMContentLoaded', () => {
+  const footer = document.querySelector('.footer');
+  
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+      }
+    });
+  }, observerOptions);
+
+  if (footer) {
+    footerObserver.observe(footer);
+  }
+});
+
+
+
+  // ═══════════════════════════════════════════════════════════════════
+// AGENCE.JS — KHAM STUDIO DESIGN
+// Animations au scroll pour une expérience narrative fluide
+// ═══════════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // ═══════════════════════════════════════════════════════════════════
+  // INTERSECTION OBSERVER — Révélation progressive des sections
+  // ═══════════════════════════════════════════════════════════════════
+  
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -100px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  // Manifeste fragmenté
+  const fragments = document.querySelectorAll('.fragment');
+  fragments.forEach((fragment, index) => {
+    fragment.style.transitionDelay = `${index * 0.3}s`;
+    observer.observe(fragment);
+  });
+
+  // Vision — Révélation image + texte
+  const imageReveal = document.querySelector('.image-reveal');
+  const visionText = document.querySelector('.vision-text');
+  
+  if (imageReveal) {
+    const visionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            imageReveal.classList.add('revealed');
+          }, 200);
+          setTimeout(() => {
+            visionText?.classList.add('visible');
+          }, 800);
+        }
+      });
+    }, { threshold: 0.3 });
+    
+    visionObserver.observe(imageReveal);
+  }
+
+  // Expertise cards
+  const expertiseCards = document.querySelectorAll('.expertise-card');
+  expertiseCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.15}s`;
+    observer.observe(card);
+  });
+
+  // Approche — Phases
+  const approachIntro = document.querySelector('.approach-intro');
+  if (approachIntro) observer.observe(approachIntro);
+
+  const phases = document.querySelectorAll('.phase');
+  phases.forEach((phase, index) => {
+    phase.style.transitionDelay = `${index * 0.2}s`;
+    observer.observe(phase);
+  });
+
+  // Présence
+  const presenceIntro = document.querySelector('.presence-intro');
+  if (presenceIntro) observer.observe(presenceIntro);
+
+  const mosaicItems = document.querySelectorAll('.mosaic-item');
+  mosaicItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.15}s`;
+    observer.observe(item);
+  });
+
+  // Valeurs
+  const valueItems = document.querySelectorAll('.value-item');
+  valueItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.2}s`;
+    observer.observe(item);
+  });
+
+  // Closure
+  const closureTexts = document.querySelectorAll('.closure-text');
+  closureTexts.forEach((text, index) => {
+    text.style.transitionDelay = `${index * 0.4}s`;
+    observer.observe(text);
+  });
+
+  // ═══════════════════════════════════════════════════════════════════
+  // SMOOTH SCROLL pour les ancres (si nécessaire)
+  // ═══════════════════════════════════════════════════════════════════
+  
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+
+  // ═══════════════════════════════════════════════════════════════════
+  // PARALLAX SUBTIL sur les images (optionnel)
+  // ═══════════════════════════════════════════════════════════════════
+  
+  const parallaxImages = document.querySelectorAll('.vision-image, .card-image');
+  
+  if (parallaxImages.length > 0) {
+    let ticking = false;
+    
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          parallaxImages.forEach(img => {
+            const rect = img.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (isVisible) {
+              const scrolled = window.pageYOffset;
+              const rate = scrolled * 0.05;
+              img.style.transform = `translateY(${rate}px)`;
+            }
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// MENU BURGER (si nécessaire pour mobile)
+// ═══════════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (!burger || !navLinks) return;
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+});
+
+// Animation d'apparition au scroll (optionnel)
+document.addEventListener('DOMContentLoaded', () => {
+  const footer = document.querySelector('.footer');
+  
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+      }
+    });
+  }, observerOptions);
+
+  if (footer) {
+    footerObserver.observe(footer);
+  }
+});
+
+
+
+// Hide loader when page is fully loaded
+window.addEventListener('load', function() {
+  const loader = document.querySelector('.banter-loader');
+  if (loader) {
+    loader.style.display = 'none';
+  }
+});
+
+</script>
+
+<script>
+// Animation d'apparition au scroll (optionnel)
+document.addEventListener('DOMContentLoaded', () => {
+  const footer = document.querySelector('.footer');
+  
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+      }
+    });
+  }, observerOptions);
+
+  if (footer) {
+    footerObserver.observe(footer);
+  }
+});
+</script>
+<script src="mobile.js"></script>
+<button id="scrollToTop" class="scroll-to-top" aria-label="Retour en haut">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// BOUTON RETOUR EN HAUT — Logique JavaScript
+// ═══════════════════════════════════════════════════════════════════
+
+(function() {
+  'use strict';
+
+  // ═══════════════════════════════════════════════════════════════
+  // CONFIGURATION
+  // ═══════════════════════════════════════════════════════════════
+  
+  const CONFIG = {
+    // Seuil de déclenchement : afficher le bouton après 300px de scroll
+    scrollThreshold: 300,
+    
+    // Durée du scroll animé (ms)
+    scrollDuration: 800,
+    
+    // Fonction d'easing pour le scroll (courbe de bezier personnalisée)
+    easingFunction: (t) => t < 0.5 
+      ? 4 * t * t * t 
+      : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
+  };
+
+  // ═══════════════════════════════════════════════════════════════
+  // SÉLECTION DES ÉLÉMENTS DOM
+  // ═══════════════════════════════════════════════════════════════
+  
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  // Vérification de l'existence du bouton
+  if (!scrollToTopBtn) {
+    console.warn('Bouton scroll-to-top introuvable. Vérifiez que l\'ID est correct.');
+    return;
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FONCTION : Afficher/Masquer le bouton selon le scroll
+  // ═══════════════════════════════════════════════════════════════
+  
+  function toggleButtonVisibility() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollPosition > CONFIG.scrollThreshold) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FONCTION : Scroll fluide vers le haut (natif avec fallback custom)
+  // ═══════════════════════════════════════════════════════════════
+  
+  function smoothScrollToTop() {
+    // Méthode moderne (supportée par la plupart des navigateurs récents)
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // Fallback : animation personnalisée pour navigateurs anciens
+      customSmoothScroll();
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FONCTION : Animation personnalisée de scroll (fallback)
+  // ═══════════════════════════════════════════════════════════════
+  
+  function customSmoothScroll() {
+    const startPosition = window.pageYOffset;
+    const startTime = performance.now();
+    
+    function animation(currentTime) {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / CONFIG.scrollDuration, 1);
+      const easing = CONFIG.easingFunction(progress);
+      
+      window.scrollTo(0, startPosition * (1 - easing));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    }
+    
+    requestAnimationFrame(animation);
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // EVENT LISTENERS
+  // ═══════════════════════════════════════════════════════════════
+  
+  // Détection du scroll avec throttle pour performance
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    
+    scrollTimeout = window.requestAnimationFrame(function() {
+      toggleButtonVisibility();
+    });
+  }, { passive: true });
+
+  // Clic sur le bouton
+  scrollToTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    smoothScrollToTop();
+  });
+
+  // ═══════════════════════════════════════════════════════════════
+  // INITIALISATION
+  // ═══════════════════════════════════════════════════════════════
+  
+  // Vérifier la position initiale au chargement
+  toggleButtonVisibility();
+
+  // Accessibilité : support clavier
+  scrollToTopBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      smoothScrollToTop();
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>

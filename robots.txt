@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://khamstudiodesign.xo.je/sitemap.xml
+
+# Empêcher l'indexation de certains dossiers (si nécessaire)
+# Disallow: /admin/
+# Disallow: /temp/

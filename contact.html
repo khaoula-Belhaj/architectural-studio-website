@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — KHAM Studio Design</title>
+  <link rel="icon" type="image/png" href="favicon.png?v=2">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome (version corrigée) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">KHAM</a>
+      <div class="nav-links">
+        <a href="projets.html" class="nav-link">Projets</a>
+        <a href="agence.html" class="nav-link">Agence</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <button class="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="contact-main">
+
+    <!-- ENTRÉE SILENCIEUSE -->
+    <section class="contact-intro">
+      <div class="intro-container">
+        <h1 class="intro-statement">
+          Un projet commence<br>
+          par une conversation
+        </h1>
+        <div class="intro-line"></div>
+      </div>
+    </section>
+
+    <!-- SECTION CONTACT ÉDITORIALE -->
+    <section class="contact-editorial">
+      <div class="editorial-container">
+        
+        <div class="editorial-manifesto">
+          <p class="manifesto-text">
+            Nous ne dessinons pas des espaces.<br>
+            Nous écoutons d'abord ce qu'ils pourraient devenir.
+          </p>
+          <p class="manifesto-subtext">
+            Que votre projet soit une maison, un espace commercial ou une rénovation complexe,
+            commençons par en parler. Sans engagement, sans formalisme.
+          </p>
+        </div>
+
+        <div class="contact-details">
+          
+          <div class="detail-block reveal-on-scroll">
+            <div class="detail-label">Email</div>
+            <a href="mailto:khamstudiodesigner@gmail.com" class="detail-value">
+              khamstudiodesigner@gmail.com
+            </a>
+          </div>
+
+          <div class="detail-block reveal-on-scroll">
+            <div class="detail-label">Téléphone</div>
+            <a href="tel:+212777222400" class="detail-value">
+              +212 777 222 400
+            </a>
+          </div>
+
+          <div class="detail-block reveal-on-scroll">
+            <div class="detail-label">Localisation</div>
+            <div class="detail-value">
+              Meknès • Casablanca<br>
+              <span class="detail-secondary">Maroc</span>
+            </div>
+          </div>
+
+          <div class="detail-block reveal-on-scroll">
+            <div class="detail-label">Disponibilité</div>
+            <div class="detail-value">
+              <span class="availability-indicator"></span>
+              Disponibles pour nouveaux projets
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORMULAIRE PREMIUM -->
+   <section class="contact-form-section">
+  <div class="form-container">
+    
+    <div class="form-header">
+      <h2 class="form-title">Parlez-nous de votre projet</h2>
+      <p class="form-subtitle">
+        Remplissez ce formulaire et nous vous répondrons sous 48h.
+      </p>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      
+      <div class="form-row">
+        <div class="form-field">
+          <label for="nom" class="field-label">Nom complet</label>
+          <input 
+            type="text" 
+            id="nom" 
+            name="nom" 
+            class="field-input" 
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="email" class="field-label">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="field-input" 
+            required
+          >
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="telephone" class="field-label">Téléphone</label>
+          <input 
+            type="tel" 
+            id="telephone" 
+            name="telephone" 
+            class="field-input"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="type" class="field-label">Type de projet</label>
+          <select id="type" name="type" class="field-select" required>
+            <option value="">Sélectionnez une option</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Design d'Intérieur">Design d'Intérieur</option>
+            <option value="Rénovation">Rénovation</option>
+            <option value="Espace Commercial">Espace Commercial</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="message" class="field-label">Message</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          class="field-textarea" 
+          rows="6"
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="form-submit">
+          <span class="submit-text">Envoyer le message</span>
+          <span class="submit-arrow">→</span>
+        </button>
+        <p class="form-notice">
+          Vos informations sont confidentielles et ne seront jamais partagées.
+        </p>
+      </div>
+
+    </form>
+
+  </div>
+</section>
+
+    <!-- BLOC PRÉSENCE -->
+    <section class="presenc-section">
+      <div class="presenc-container">
+        
+        <div class="presenc-header">
+          <h2 class="presenc-title">Nos bureaux</h2>
+        </div>
+
+        <div class="presenc-grid">
+          
+          <div class="location-card reveal-on-scroll">
+            <div class="location-marker">
+              <div class="marker-dot"></div>
+            </div>
+            <div class="location-content">
+              <h3 class="location-name">Meknès</h3>
+              <p class="location-address">
+                Bureau principal<br>
+                Disponible sur rendez-vous
+              </p>
+            </div>
+          </div>
+
+          <div class="location-card reveal-on-scroll">
+            <div class="location-marker">
+              <div class="marker-dot"></div>
+            </div>
+            <div class="location-content">
+              <h3 class="location-name">Casablanca</h3>
+              <p class="location-address">
+                Bureau secondaire<br>
+                Disponible sur rendez-vous
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="presenc-statement">
+          <p class="statement-text">
+            Nous nous déplaçons également sur tout le territoire marocain<br>
+            pour rencontrer nos clients et visiter les sites de projet.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CLÔTURE POÉTIQUE -->
+    <section class="contact-closure">
+      <div class="closure-container">
+        <p class="closure-quote">
+          "L'architecture est une langue.<br>
+          Commençons à la parler ensemble."
+        </p>
+        <div class="closure-signature">KHAM Studio Design</div>
+      </div>
+    </section>
+
+    <section class="fermeture">
+      <a href="https://wa.me/212777222400?text=Bonjour%20KhamStudio%20Design%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." class="fermeture__lien">
+       <span>Parlons de votre projet</span>
+        <span class="fermeture__fleche">→</span>
+      </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <div class="footer-manifesto">
+      <p class="manifesto-text">
+        Nous construisons l'invisible.<br>
+        Chaque projet est une conversation entre l'espace et ceux qui l'habitent.
+      </p>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-grid">
+      
+      <div class="footer-col footer-studio">
+        <h3 class="footer-title">KHAM Studio Design</h3>
+        <p class="footer-tagline">Architecture • Intérieur • Design</p>
+        
+        <div class="footer-locations">
+          <div class="location-item">
+            <span class="location-pin">⚬</span>
+            <span>Meknès, Maroc</span>
+          </div>
+          <div class="location-item">
+            <span class="location-pin">⚬</span>
+            <span>Casablanca</span>
+          </div>
+        </div>
+
+        <p class="footer-availability">
+          <span class="availability-dot"></span>
+          Disponible pour nouveaux projets
+        </p>
+      </div>
+
+      <div class="footer-col footer-contact">
+        <h4 class="footer-subtitle">Contact</h4>
+        
+        <div class="contact-list">
+          <a href="mailto:khamstudiodesigner@gmail.com" class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">khamstudiodesigner@gmail.com</span>
+          </a>
+          
+          <a href="tel:+212777222400" class="contact-item">
+            <span class="contact-label">Téléphone</span>
+            <span class="contact-value">+212 777 222 400</span>
+          </a>
+        </div>
+
+        <p class="footer-timezone">GMT+1 • Lun–Ven, 9h–18h</p>
+      </div>
+
+      <div class="footer-col footer-nav">
+        <h4 class="footer-subtitle">Explorer</h4>
+        
+        <nav class="footer-links">
+          <a href="projets.html" class="footer-link">Réalisations</a>
+          <a href="agence.html" class="footer-link">L'Agence</a>
+          <a href="index.html#services" class="footer-link">Services</a>
+          <a href="contact.html" class="footer-link">Nous Contacter</a>
+        </nav>
+      </div>
+
+      <div class="footer-col footer-social-col">
+        <h4 class="footer-subtitle">Suivez-nous</h4>
+        
+        <div class="social">
+          <a href="mailto:khamstudiodesigner@gmail.com?subject=Demande%20de%20renseignements" class="social-link email" aria-label="Email" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-envelope"></i>
+            <span class="tooltip">Email</span>
+          </a>
+          <a href="tel:+212777222400" class="social-link phone" aria-label="Téléphone">
+            <i class="fas fa-phone"></i>
+            <span class="tooltip">Téléphone</span>
+          </a>
+          <a href="https://www.linkedin.com/in/mariyem-belhaj-415923227" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+            <span class="tooltip">linkedin</span>
+          </a>
+          <a href="https://www.facebook.com/share/1Fn6iz4RuW/?mibextid=wwXIfr" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i>
+            <span class="tooltip">Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/kham_studiodesign?igsh=MXcybno0YnI0OGNoMg%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+            <span class="tooltip">Instagram</span>
+          </a>
+          <a href="https://wa.me/212777222400?text=Bonjour%20KhamStudio%20Design%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." class="social-link whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-divider footer-divider-bottom"></div>
+
+    <div class="footer-legal">
+      <div class="legal-left">
+        <p class="copyright">© 2026 KHAM Studio Design. Tous droits réservés.</p>
+        <div class="legal-links">
+          <a href="legal.html#mentions-legales" class="legal-link">Mentions Légales</a>
+          <span class="legal-separator">•</span>
+          <a href="legal.html#confidentialite" class="legal-link">Confidentialité</a>
+        </div>
+      </div>
+      
+      <div class="legal-right">
+        <p class="legal-credit">Conçu avec intention</p>
+      </div>
+    </div>
+    
+    <div class="footer-dev-credit">
+      <p class="dev-text">
+        Site web conçu et développé par 
+        <a href="https://www.instagram.com/hepburn_studio_?igsh=MXcybno0YnI0OGNoMg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="dev-name">Hepburn Studio</a>
+      </p>
+    </div>
+
+    <div class="footer-closing">
+      <p class="closing-message">L'architecture est une langue. Écoutons-la ensemble.</p>
+    </div>
+
+  </div>
+</footer>
+
+<button id="scrollToTop" class="scroll-to-top" aria-label="Retour en haut">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+<script src="mobile.js"></script>
+<!-- SDK EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!-- Code EmailJS AVEC DEBUG COMPLET -->
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   EMAILJS - VERSION DEBUG COMPLÈTE POUR KHAM STUDIO
+   ═══════════════════════════════════════════════════════════════════ */
+
+// ═══════════════════════════════════════════════════════════════════
+// CONFIGURATION - REMPLACEZ PAR VOS VRAIES CLÉS EMAILJS
+// ═══════════════════════════════════════════════════════════════════
+
+const CONFIG = {
+  publicKey: 'f4UXKA6hS9VqvhYWY',      // ← VÉRIFIEZ cette clé sur EmailJS
+  serviceID: 'service_44jctcz',        // ← VÉRIFIEZ ce Service ID
+  templateID: 'template_tew460k'       // ← VÉRIFIEZ ce Template ID
+};
+
+// ═══════════════════════════════════════════════════════════════════
+// INITIALISATION AVEC DEBUG
+// ═══════════════════════════════════════════════════════════════════
+
+(function() {
+  console.log('═══════════════════════════════════════════════════════');
+  console.log('🔧 INITIALISATION EMAILJS');
+  console.log('═══════════════════════════════════════════════════════');
+  console.log('📌 Public Key:', CONFIG.publicKey);
+  console.log('📌 Service ID:', CONFIG.serviceID);
+  console.log('📌 Template ID:', CONFIG.templateID);
+  
+  try {
+    emailjs.init(CONFIG.publicKey);
+    console.log('✅ EmailJS initialisé avec succès');
+  } catch (error) {
+    console.error('❌ ERREUR d\'initialisation EmailJS:', error);
+  }
+  
+  console.log('═══════════════════════════════════════════════════════\n');
+})();
+
+// ═══════════════════════════════════════════════════════════════════
+// FONCTIONS D'AFFICHAGE
+// ═══════════════════════════════════════════════════════════════════
+
+function showLoader(show) {
+  const submitBtn = document.querySelector('.form-submit');
+  const submitText = submitBtn.querySelector('.submit-text');
+  
+  if (show) {
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+    submitBtn.style.cursor = 'not-allowed';
+    submitText.textContent = 'Envoi en cours...';
+  } else {
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+    submitBtn.style.cursor = 'pointer';
+    submitText.textContent = 'Envoyer le message';
+  }
+}
+
+function showSuccessMessage() {
+  const notification = document.createElement('div');
+  notification.style.cssText = `
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+    z-index: 9999;
+    font-family: 'Montserrat', sans-serif;
+    animation: slideIn 0.3s ease;
+  `;
+  
+  notification.innerHTML = `
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <div>
+        <div style="font-weight: 600; margin-bottom: 4px;">✅ Message envoyé !</div>
+        <div style="font-size: 0.875rem; opacity: 0.9;">Nous vous répondrons sous 48h.</div>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(notification);
+  
+  setTimeout(() => {
+    notification.style.animation = 'slideOut 0.3s ease';
+    setTimeout(() => notification.remove(), 300);
+  }, 5000);
+}
+
+function showErrorMessage(errorDetails) {
+  const notification = document.createElement('div');
+  notification.style.cssText = `
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.3);
+    z-index: 9999;
+    font-family: 'Montserrat', sans-serif;
+    animation: slideIn 0.3s ease;
+  `;
+  
+  notification.innerHTML = `
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+      <div>
+        <div style="font-weight: 600; margin-bottom: 4px;">❌ Erreur d'envoi</div>
+        <div style="font-size: 0.875rem; opacity: 0.9;">${errorDetails}</div>
+        <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 4px;">Contactez-nous directement : +212 777 222 400</div>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(notification);
+  
+  setTimeout(() => {
+    notification.style.animation = 'slideOut 0.3s ease';
+    setTimeout(() => notification.remove(), 300);
+  }, 7000);
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// GESTION DU FORMULAIRE AVEC DEBUG COMPLET
+// ═══════════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  console.log('🚀 Script de formulaire chargé');
+  
+  const form = document.getElementById('contactForm');
+  
+  if (!form) {
+    console.error('❌ ERREUR CRITIQUE : Formulaire introuvable avec ID "contactForm"');
+    return;
+  }
+  
+  console.log('✅ Formulaire trouvé');
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    console.log('\n═══════════════════════════════════════════════════════');
+    console.log('📤 SOUMISSION DU FORMULAIRE');
+    console.log('═══════════════════════════════════════════════════════');
+    
+    // ═══════════════════════════════════════════════════════════════
+    // RÉCUPÉRATION DES DONNÉES
+    // ═══════════════════════════════════════════════════════════════
+    
+    const formData = {
+      from_name: document.getElementById('nom').value,
+      from_email: document.getElementById('email').value,
+      phone: document.getElementById('telephone').value || 'Non renseigné',
+      project_type: document.getElementById('type').value,
+      message: document.getElementById('message').value,
+      date: new Date().toLocaleDateString('fr-FR', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      }),
+      time: new Date().toLocaleTimeString('fr-FR', { 
+        hour: '2-digit', 
+        minute: '2-digit' 
+      })
+    };
+    
+    console.log('📋 Données récupérées:');
+    console.log('  - Nom:', formData.from_name);
+    console.log('  - Email:', formData.from_email);
+    console.log('  - Téléphone:', formData.phone);
+    console.log('  - Type projet:', formData.project_type);
+    console.log('  - Message:', formData.message.substring(0, 50) + '...');
+    
+    // ═══════════════════════════════════════════════════════════════
+    // VALIDATION
+    // ═══════════════════════════════════════════════════════════════
+    
+    console.log('\n🔍 Validation des données...');
+    
+    if (!formData.from_name || !formData.from_email || !formData.project_type || !formData.message) {
+      console.error('❌ Validation échouée : champs manquants');
+      alert('⚠️ Veuillez remplir tous les champs obligatoires');
+      return;
+    }
+    
+    // Validation email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.from_email)) {
+      console.error('❌ Validation échouée : format email invalide');
+      alert('⚠️ Veuillez entrer une adresse email valide');
+      return;
+    }
+    
+    console.log('✅ Validation réussie');
+    
+    // ═══════════════════════════════════════════════════════════════
+    // ENVOI AVEC DEBUG DÉTAILLÉ
+    // ═══════════════════════════════════════════════════════════════
+    
+    showLoader(true);
+    
+    console.log('\n🚀 Envoi vers EmailJS...');
+    console.log('📧 Service ID:', CONFIG.serviceID);
+    console.log('📄 Template ID:', CONFIG.templateID);
+    console.log('⏳ Attente de la réponse...\n');
+    
+    emailjs.send(CONFIG.serviceID, CONFIG.templateID, formData)
+      .then(function(response) {
+        console.log('═══════════════════════════════════════════════════════');
+        console.log('✅✅✅ EMAIL ENVOYÉ AVEC SUCCÈS ✅✅✅');
+        console.log('═══════════════════════════════════════════════════════');
+        console.log('📊 Détails de la réponse:');
+        console.log('  - Status:', response.status);
+        console.log('  - Text:', response.text);
+        console.log('  - Réponse complète:', response);
+        console.log('═══════════════════════════════════════════════════════\n');
+        
+        showLoader(false);
+        showSuccessMessage();
+        form.reset();
+      })
+      .catch(function(error) {
+        console.log('═══════════════════════════════════════════════════════');
+        console.error('❌❌❌ ERREUR D\'ENVOI ❌❌❌');
+        console.log('═══════════════════════════════════════════════════════');
+        console.error('📊 Détails de l\'erreur:');
+        console.error('  - Status:', error.status);
+        console.error('  - Text:', error.text);
+        console.error('  - Message:', error.message);
+        console.error('  - Erreur complète:', error);
+        console.log('═══════════════════════════════════════════════════════\n');
+        
+        showLoader(false);
+        
+        // Messages d'erreur détaillés selon le code
+        let errorMessage = 'Erreur inconnue. Vérifiez la console (F12).';
+        
+        if (error.status === 400) {
+          errorMessage = 'Données invalides. Vérifiez vos champs.';
+          console.error('💡 SOLUTION: Vérifiez que tous les champs sont correctement remplis');
+        } else if (error.status === 401) {
+          errorMessage = 'Clé API invalide. Contactez le développeur.';
+          console.error('💡 SOLUTION: La Public Key dans CONFIG est incorrecte');
+          console.error('   → Allez sur EmailJS Dashboard → Account → API Keys');
+          console.error('   → Copiez la vraie Public Key et remplacez dans le code');
+        } else if (error.status === 404) {
+          errorMessage = 'Service ou Template introuvable.';
+          console.error('💡 SOLUTION: Le Service ID ou Template ID est incorrect');
+          console.error('   → Service ID actuel:', CONFIG.serviceID);
+          console.error('   → Template ID actuel:', CONFIG.templateID);
+          console.error('   → Vérifiez dans EmailJS Dashboard');
+        } else if (error.status === 412) {
+          errorMessage = 'Service email non configuré.';
+          console.error('💡 SOLUTION: Votre service Gmail/Outlook n\'est pas connecté');
+          console.error('   → Allez sur EmailJS Dashboard → Email Services');
+          console.error('   → Connectez votre compte email');
+        } else if (error.status === 422) {
+          errorMessage = 'Variables du template manquantes.';
+          console.error('💡 SOLUTION: Votre template EmailJS manque des variables');
+          console.error('   → Ouvrez votre template sur EmailJS');
+          console.error('   → Ajoutez ces variables: {{from_name}}, {{from_email}}, {{phone}}, {{project_type}}, {{message}}, {{date}}, {{time}}');
+        } else if (error.text) {
+          errorMessage = error.text;
+        }
+        
+        showErrorMessage(errorMessage);
+        
+        console.log('📞 ALTERNATIVES DE CONTACT:');
+        console.log('  - Email: khamstudiodesigner@gmail.com');
+        console.log('  - Téléphone: +212 777 222 400');
+        console.log('  - WhatsApp: https://wa.me/212777222400');
+      });
+  });
+  
+  console.log('✅ Event listener du formulaire ajouté\n');
+  
+});
+
+// ═══════════════════════════════════════════════════════════════════
+// CSS ANIMATIONS
+// ═══════════════════════════════════════════════════════════════════
+
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes slideIn {
+    from {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    div[style*="position: fixed"][style*="top: 30px"] {
+      top: 20px !important;
+      right: 20px !important;
+      left: 20px !important;
+      max-width: none !important;
+    }
+  }
+`;
+document.head.appendChild(style);
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// BOUTON RETOUR EN HAUT
+// ═══════════════════════════════════════════════════════════════════
+
+(function() {
+  'use strict';
+
+  const SCROLL_CONFIG = {
+    scrollThreshold: 300,
+    scrollDuration: 800,
+    easingFunction: (t) => t < 0.5 
+      ? 4 * t * t * t 
+      : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
+  };
+
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  if (!scrollToTopBtn) {
+    console.warn('Bouton scroll-to-top introuvable.');
+    return;
+  }
+
+  function toggleButtonVisibility() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollPosition > SCROLL_CONFIG.scrollThreshold) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  }
+
+  function smoothScrollToTop() {
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      customSmoothScroll();
+    }
+  }
+
+  function customSmoothScroll() {
+    const startPosition = window.pageYOffset;
+    const startTime = performance.now();
+    
+    function animation(currentTime) {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / SCROLL_CONFIG.scrollDuration, 1);
+      const easing = SCROLL_CONFIG.easingFunction(progress);
+      
+      window.scrollTo(0, startPosition * (1 - easing));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    }
+    
+    requestAnimationFrame(animation);
+  }
+
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    
+    scrollTimeout = window.requestAnimationFrame(function() {
+      toggleButtonVisibility();
+    });
+  }, { passive: true });
+
+  scrollToTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    smoothScrollToTop();
+  });
+
+  toggleButtonVisibility();
+
+  scrollToTopBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      smoothScrollToTop();
+    }
+  });
+
+})();
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// ANIMATIONS AU SCROLL
+// ═══════════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -80px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  const introStatement = document.querySelector('.intro-statement');
+  if (introStatement) {
+    observer.observe(introStatement);
+  }
+
+  document.querySelectorAll('.location-card').forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.15}s`;
+    observer.observe(card);
+  });
+
+  // FOCUS sur les champs
+  const formFields = document.querySelectorAll('.field-input, .field-select, .field-textarea');
+  
+  formFields.forEach(field => {
+    field.addEventListener('focus', () => {
+      field.parentElement.classList.add('field-focused');
+    });
+    
+    field.addEventListener('blur', () => {
+      field.parentElement.classList.remove('field-focused');
+      if (field.value) {
+        field.parentElement.classList.add('field-filled');
+      } else {
+        field.parentElement.classList.remove('field-filled');
+      }
+    });
+  });
+
+});
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// MENU BURGER
+// ═══════════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (!burger || !navLinks) return;
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadre & Confiance — KHAM Studio Design</title>
+<link rel="icon" type="image/png" href="favicon.png?v=2">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <!-- icons links social -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- Notre fichier CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+  
+    /* ═══════════════════════════════════════════════════════════════════
+       ENTRÉE SILENCIEUSE
+    ═══════════════════════════════════════════════════════════════════ */
+    .legal-intro {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10vh 5%;
+      background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.02) 0%, var(--color-bg) 70%);
+      position: relative;
+    }
+
+    .intro-container {
+      max-width: 1000px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .intro-statement {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      color: var(--color-text);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.5s var(--transition-elegant) forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .intro-line {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+      opacity: 0.4;
+    }
+
+    .intro-subtext {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--color-muted);
+      max-width: 700px;
+      opacity: 0;
+      animation: fadeInUp 1.5s var(--transition-elegant) 0.3s forwards;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════
+       SECTIONS LÉGALES
+    ═══════════════════════════════════════════════════════════════════ */
+    .legal-section {
+      padding: 15vh 5%;
+      background: var(--color-charbon);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .legal-section:nth-child(odd) {
+      background: var(--color-bg);
+    }
+
+    .section-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 8vh;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s var(--transition-smooth);
+    }
+
+    .section-header.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      margin-bottom: 2rem;
+      color: var(--color-text);
+    }
+
+    .section-subtitle {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--color-muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════
+       CONTENU JURIDIQUE
+    ═══════════════════════════════════════════════════════════════════ */
+    .legal-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    .content-block {
+     opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+    }
+
+    .content-block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .block-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 2rem;
+      color: var(--color-text);
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .block-title::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 60%;
+      background: var(--color-accent);
+      opacity: 0.5;
+    }
+
+    .block-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-left: 2rem;
+    }
+
+    .block-content p {
+      font-size: clamp(1rem, 1.1vw, 1.1rem);
+      line-height: 1.9;
+      color: rgba(245, 245, 245, 0.85);
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    .block-content strong {
+      color: var(--color-text);
+      font-weight: 400;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1.5rem 3rem;
+      margin: 2rem 0;
+    }
+
+    .info-label {
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      font-weight: 400;
+    }
+
+    .info-value {
+      font-size: 1.05rem;
+      color: var(--color-text);
+      font-weight: 300;
+    }
+
+    .info-value a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: opacity 0.3s var(--transition-smooth);
+    }
+
+    .info-value a:hover {
+      opacity: 0.7;
+    }
+
+    .highlight-box {
+      background: rgba(212, 175, 55, 0.03);
+      border-left: 2px solid var(--color-accent);
+      padding: 2rem 2.5rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-box p {
+      color: rgba(245, 245, 245, 0.9);
+    }
+
+    ul.legal-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    ul.legal-list li {
+      position: relative;
+      padding-left: 2rem;
+      font-size: clamp(1rem, 1.1vw, 1.1rem);
+      line-height: 1.8;
+      color: rgba(245, 245, 245, 0.85);
+      font-weight: 300;
+    }
+
+    ul.legal-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      opacity: 0.6;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════
+       CLÔTURE ÉDITORIALE
+    ═══════════════════════════════════════════════════════════════════ */
+    .legal-closure {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12vh 5%;
+      background: var(--color-bg);
+      position: relative;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .closure-container {
+      text-align: center;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .closure-quote {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+      color: var(--color-text);
+      font-style: italic;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s var(--transition-smooth);
+    }
+
+    .closure-quote.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .closure-signature {
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      font-weight: 300;
+    }
+
+    .closure-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 3rem;
+      background: transparent;
+      border: 1px solid var(--color-border);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 400;
+      text-decoration: none;
+      transition: all 0.5s var(--transition-elegant);
+      position: relative;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .closure-link::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(212, 175, 55, 0.05);
+      transform: translateX(-100%);
+      transition: transform 0.6s var(--transition-elegant);
+    }
+
+    .closure-link:hover::before {
+      transform: translateX(0);
+    }
+
+    .closure-link:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      
+      .legal-intro {
+        min-height: 70vh;
+        padding: 8vh 5%;
+      }
+
+      .legal-section {
+        padding: 10vh 5%;
+      }
+
+      .section-header {
+        margin-bottom: 5vh;
+      }
+
+      .legal-content {
+        gap: 3.5rem;
+      }
+
+      .block-title {
+        padding-left: 1.5rem;
+      }
+
+      .block-content {
+        padding-left: 1.5rem;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .info-label {
+        font-size: 0.75rem;
+      }
+
+      .highlight-box {
+        padding: 1.5rem;
+      }
+
+      .legal-closure {
+        min-height: 60vh;
+        padding: 8vh 5%;
+      }
+
+      .closure-link {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .intro-statement {
+        font-size: 2rem;
+      }
+
+      .block-title {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+      }
+
+      .block-content {
+        padding-left: 1rem;
+      }
+
+      .closure-quote {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════════
+       SCROLL ANIMATIONS
+    ═══════════════════════════════════════════════════════════════════ */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s var(--transition-smooth);
+    }
+
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════════════════════════ -->
+  <!-- Navigation -->
+  <header class="header">
+    
+    <nav class="nav container">
+      <a href="index.html" class="logo">KHAM</a>
+
+      <div class="nav-links">
+        <a href="projets.html" class="nav-link" data-key="navProjets">Projets</a>
+        <a href="agence.html"   class="nav-link" data-key="navAgence">Agence</a>
+        <a href="contact.html"  class="nav-link" data-key="navContact">Contact</a>
+      </div>
+
+      
+      <!-- Burger (mobile) -->
+      <button class="burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    
+    </nav>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ENTRÉE SILENCIEUSE -->
+    <section class="legal-intro">
+      <div class="intro-container">
+        <h1 class="intro-statement">Cadre & Confiance</h1>
+        <div class="intro-line"></div>
+        <p class="intro-subtext">
+          Chaque projet naît d'une relation de confiance. Voici le cadre qui soutient notre collaboration.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION — MENTIONS LÉGALES -->
+    <section id="mentions-legales" class="legal-section">
+      <div class="section-container">
+        
+        <header class="section-header reveal-on-scroll">
+          <h2 class="section-title">Mentions Légales</h2>
+          <p class="section-subtitle">
+            Identité, responsabilité et transparence de KHAM Studio Design.
+          </p>
+        </header>
+
+        <div class="legal-content">
+
+          <!-- Bloc 1 : Identité -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Identité du Studio</h3>
+            <div class="block-content">
+              <div class="info-grid">
+                <span class="info-label">Dénomination</span>
+                <span class="info-value">KHAM Studio Design</span>
+
+                <span class="info-label">Activité</span>
+                <span class="info-value">Architecture, Design d'intérieur, Conseil en aménagement</span>
+
+                <span class="info-label">Localisation</span>
+                <span class="info-value">Meknes, Maroc</span>
+
+                <span class="info-label">Email</span>
+                <span class="info-value"><a href="mailto:khamstudiodesigner@gmail.com?subject=Demande%20de%20renseignements">khamstudiodesigner@gmail.com</a></span>
+
+                <span class="info-label">Téléphone</span>
+                <span class="info-value"><a href="tel:+212777222400">+212 777 222 400</a></span>
+
+                <span class="info-label">Développement</span>
+                <span class="info-value"><a href="https://www.instagram.com/hepburn_studio_?igsh=MXcybno0YnI0OGNoMg%3D%3D&utm_source=qr" target="_blank" class="dev-name">Hepburn Studio</a></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloc 2 : Hébergement -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Hébergement du Site</h3>
+            <div class="block-content">
+              <p>
+                Ce site web est hébergé sur une infrastructure sécurisée garantissant 
+                la disponibilité et la protection des données transmises.
+              </p>
+              <p>
+                Pour toute question technique relative à l'hébergement, 
+                contactez-nous à <a class="info-value" href="mailto:khamstudiodesigner@gmail.com?subject=Demande%20de%20renseignements">khamstudiodesigner@gmail.com</a>.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bloc 3 : Propriété Intellectuelle -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Propriété Intellectuelle</h3>
+            <div class="block-content">
+              <p>
+                L'ensemble des contenus présents sur ce site — textes, images, photographies, illustrations, vidéos, identité visuelle — est la propriété exclusive de <strong>KHAM Studio Design</strong>, sauf mention contraire.
+              </p>
+              <p>
+                Toute reproduction, distribution ou utilisation sans autorisation préalable écrite est strictement interdite et constitue une contrefaçon sanctionnable.
+              </p>
+              <div class="highlight-box">
+                <p>
+                  Les projets présentés reflètent notre approche créative. Certaines photographies proviennent de collaborateurs et partenaires crédités sur demande.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloc 4 : Responsabilité -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Responsabilité Éditoriale</h3>
+            <div class="block-content">
+              <p>
+                KHAM Studio Design met tout en œuvre pour assurer l'exactitude et l'actualité des informations diffusées sur ce site. Toutefois, nous ne saurions être tenus responsables d'éventuelles erreurs, omissions ou résultats obtenus par l'utilisation de ces informations.
+              </p>
+              <p>
+                Les liens externes présents sur ce site sont fournis à titre informatif. Nous n'exerçons aucun contrôle sur le contenu de ces sites tiers et déclinons toute responsabilité quant à leur contenu.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bloc 5 : Cookies -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Cookies & Statistiques</h3>
+            <div class="block-content">
+              <p>
+                Ce site utilise des cookies strictement nécessaires à son fonctionnement technique et à l'amélioration de l'expérience utilisateur.
+              </p>
+              <p>
+                Aucun cookie publicitaire ou de traçage tiers n'est utilisé. Les données analytiques collectées sont anonymisées et ne permettent aucune identification personnelle.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION — POLITIQUE DE CONFIDENTIALITÉ -->
+    <section id="confidentialite" class="legal-section">
+      <div class="section-container">
+        
+        <header class="section-header reveal-on-scroll">
+          <h2 class="section-title">Politique de Confidentialité</h2>
+          <p class="section-subtitle">
+            Protection de vos données personnelles et respect de votre vie privée.
+          </p>
+        </header>
+
+        <div class="legal-content">
+
+          <!-- Bloc 1 : Engagement -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Notre Engagement</h3>
+            <div class="block-content">
+              <p>
+                KHAM Studio Design s'engage à respecter votre vie privée et à protéger vos données personnelles conformément aux législations en vigueur, notamment le <strong>RGPD</strong> (Règlement Général sur la Protection des Données).
+              </p>
+              <div class="highlight-box">
+                <p>
+                  Nous collectons uniquement les informations strictement nécessaires à la gestion de nos relations professionnelles et ne les partageons jamais avec des tiers à des fins commerciales.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bloc 2 : Données Collectées -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Données Collectées</h3>
+            <div class="block-content">
+              <p>
+                Lorsque vous utilisez notre formulaire de contact, nous collectons les données suivantes :
+              </p>
+              <ul class="legal-list">
+                <li>Nom et prénom</li>
+                <li>Adresse email</li>
+                <li>Numéro de téléphone (facultatif)</li>
+                <li>Nature de votre projet ou demande</li>
+                <li>Message descriptif</li>
+              </ul>
+              <p>
+                Ces informations sont collectées avec votre consentement explicite lors de la soumission du formulaire.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bloc 3 : Finalité -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Finalité du Traitement</h3>
+            <div class="block-content">
+              <p>
+                Les données personnelles collectées sont utilisées exclusivement pour :
+              </p>
+              <ul class="legal-list">
+                <li>Répondre à vos demandes d'information ou de devis</li>
+                <li>Établir un premier contact professionnel</li>
+                <li>Assurer le suivi de nos échanges concernant votre projet</li>
+                <li>Gérer notre relation contractuelle si une collaboration débute</li>
+              </ul>
+              <p>
+                Aucune utilisation à des fins de prospection commerciale non sollicitée n'est effectuée.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bloc 4 : Conservation -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Conservation des Données</h3>
+            <div class="block-content">
+              <p>
+                Vos données personnelles sont conservées pour une durée strictement nécessaire à la finalité pour laquelle elles ont été collectées :
+              </p>
+              <ul class="legal-list">
+                <li><strong>3 ans</strong> pour les demandes n'ayant pas donné lieu à une collaboration</li>
+                <li><strong>Durée légale applicable</strong> pour les projets réalisés (obligations comptables et archivage)</li>
+              </ul>
+              <p>
+                À l'issue de ces périodes, vos données sont automatiquement supprimées ou anonymisées.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bloc 5 : Sécurité -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Sécurité & Protection</h3>
+            <div class="block-content">
+              <p>
+                Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour garantir la sécurité de vos données personnelles et prévenir tout accès non autorisé, modification, divulgation ou destruction.
+              </p>
+              <p>
+                Les transmissions de données via notre formulaire de contact sont sécurisées par protocole <strong>HTTPS</strong>.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bloc 6 : Vos Droits -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Vos Droits</h3>
+            <div class="block-content">
+              <p>
+                Conformément à la législation en vigueur, vous disposez des droits suivants concernant vos données personnelles :
+              </p>
+              <ul class="legal-list">
+                <li><strong>Droit d'accès</strong> : obtenir confirmation que vos données sont traitées et en recevoir une copie</li>
+                <li><strong>Droit de rectification</strong> : corriger des données inexactes ou incomplètes</li>
+                <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
+                <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données pour des motifs légitimes</li>
+                <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
+              </ul>
+              <p>
+                Pour exercer ces droits, contactez-nous à <a class="info-value" href="mailto:khamstudiodesigner@gmail.com">khamstudiodesigner@gmail.com</a>. Nous répondrons à votre demande dans un délai d'un mois.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bloc 7 : Contact -->
+          <article class="content-block reveal-on-scroll">
+            <h3 class="block-title">Contact & Réclamation</h3>
+            <div class="block-content">
+              <p>
+                Pour toute question relative à la protection de vos données personnelles ou pour exercer vos droits, vous pouvez nous contacter à l'adresse suivante :
+              </p>
+              <div class="info-grid">
+                <span class="info-label">Email</span>
+                <span class="info-value"><a href="mailto:khamstudiodesigner@gmail.com">khamstudiodesigner@gmail.com</a></span>
+
+                <span class="info-label">Courrier</span>
+                <span class="info-value">KHAM Studio Design<br>Meknès, Maroc</span>
+              </div>
+              <p>
+                Si vous estimez que vos droits ne sont pas respectés, vous avez le droit d'introduire une réclamation auprès de l'autorité de contrôle compétente.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLÔTURE ÉDITORIALE -->
+    <section class="legal-closure">
+      <div class="closure-container">
+        <blockquote class="closure-quote reveal-on-scroll">
+          « L'espace ne se mesure pas qu'en mètres carrés. Il se construit aussi en confiance. »
+        </blockquote>
+        <p class="closure-signature">— KHAM Studio Design</p>
+        <a href="contact.html" class="closure-link">Démarrer un Projet</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Manifeste / Signature éditoriale -->
+    <div class="footer-manifesto">
+      <p class="manifesto-text">
+        Nous construisons l'invisible.<br>
+        Chaque projet est une conversation entre l'espace et ceux qui l'habitent.
+      </p>
+    </div>
+
+    <!-- Séparateur visuel subtil -->
+    <div class="footer-divider"></div>
+
+    <!-- Grille principale du footer -->
+    <div class="footer-grid">
+      
+      <!-- Colonne 1 : Studio & Identité -->
+      <div class="footer-col footer-studio">
+        <h3 class="footer-title">KHAM Studio Design</h3>
+        <p class="footer-tagline">Architecture • Intérieur • Design</p>
+        
+        <div class="footer-locations">
+          <div class="location-item">
+            <span class="location-pin">⚬</span>
+            <span>Meknès, Maroc</span>
+          </div>
+          <div class="location-item">
+            <span class="location-pin">⚬</span>
+            <span>Casablanca</span>
+          </div>
+        </div>
+
+        <p class="footer-availability">
+          <span class="availability-dot"></span>
+          Disponible pour nouveaux projets
+        </p>
+      </div>
+
+      <!-- Colonne 2 : Contact enrichi -->
+      <div class="footer-col footer-contact">
+        <h4 class="footer-subtitle">Contact</h4>
+        
+        <div class="contact-list">
+          <a href="mailto:contact@kham.studio" class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">khamstudiodesigner@gmail.com</span>
+          </a>
+          
+          <a href="tel:+212777222400" class="contact-item">
+            <span class="contact-label">Téléphone</span>
+            <span class="contact-value">+212 777 222 400</span>
+          </a>
+        </div>
+
+        <p class="footer-timezone">GMT+1 • Lun–Ven, 9h–18h</p>
+      </div>
+
+      <!-- Colonne 3 : Navigation secondaire -->
+      <div class="footer-col footer-nav">
+        <h4 class="footer-subtitle">Explorer</h4>
+        
+        <nav class="footer-links">
+          <a href="projets.html" class="footer-link">Réalisations</a>
+          <a href="agence.html" class="footer-link">L'Agence</a>
+          <a href="index.html#services" class="footer-link">Services</a>
+          <a href="contact.html" class="footer-link">Nous Contacter</a>
+        </nav>
+      </div>
+
+      <!-- Colonne 4 : Réseaux sociaux (CONSERVÉS) -->
+      <div class="footer-col footer-social-col">
+        <h4 class="footer-subtitle">Suivez-nous</h4>
+        
+        <div class="social">
+          <!-- VOS ICÔNES EXISTANTES - Ne pas modifier -->
+           <a href="mailto:khamstudiodesigner@gmail.com?subject=Demande%20de%20renseignements" class="social-link email" aria-label="Email" target="_blank">
+        <i class="fas fa-envelope"></i>
+        <span class="tooltip">Email</span>
+      </a>
+      <a href="tel:+212777222400" class="social-link phone" aria-label="Téléphone" target="_blank">
+        <i class="fas fa-phone"></i>
+        <span class="tooltip">Téléphone</span>
+      </a>
+      <!-- Liens sociaux avec icons Font Awesome (assure-toi que FA est chargé dans <head>) -->
+      <a href="https://www.linkedin.com/in/mariyem-belhaj-415923227" class="social-link" aria-label="LinkedIn" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+        <span class="tooltip">linkedin</span>
+      </a>
+      
+      <a href="https://www.facebook.com/share/1Fn6iz4RuW/?mibextid=wwXIfr" class="social-link" aria-label="Facebook" target="_blank">
+        <i class="fab fa-facebook"></i>
+        <span class="tooltip">Facebook</span>
+      </a>
+      
+      <a href="https://www.instagram.com/kham_studiodesign?igsh=MXcybno0YnI0OGNoMg%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram" target="_blank">
+        <i class="fab fa-instagram"></i>
+        <span class="tooltip">Instagram</span>
+      </a>
+      
+      <a href="https://wa.me/212777222400?text=Bonjour%20KhamStudio%20Design%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." class="social-link whatsapp" aria-label="WhatsApp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">WhatsApp</span>
+      </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Séparateur visuel subtil -->
+    <div class="footer-divider footer-divider-bottom"></div>
+
+    <!-- Barre légale & crédits -->
+    <div class="footer-legal">
+      <div class="legal-left">
+        <p class="copyright">© 2026 KHAM Studio Design. Tous droits réservés.</p>
+        <div class="legal-links">
+          <a href="legal.html#mentions-legales" class="legal-link">Mentions Légales</a>
+          <span class="legal-separator">•</span>
+          <a href="legal.html#confidentialite" class="legal-link">Confidentialité</a>
+        </div>
+      </div>
+      
+      <div class="legal-right">
+        <p class="legal-credit">Conçu avec intention</p>
+      </div>
+    </div>
+    <div class="footer-dev-credit">
+  <p class="dev-text">
+    Site web conçu et développé par 
+    <a href="https://www.instagram.com/hepburn_studio_?igsh=MXcybno0YnI0OGNoMg%3D%3D&utm_source=qr" target="_blank" class="dev-name">Hepburn Studio</a>
+  </p>
+</div>
+    <!-- Message de fin (optionnel mais puissant) -->
+    <div class="footer-closing">
+      <p class="closing-message">L'architecture est une langue. Écoutons-la ensemble.</p>
+    </div>
+
+  </div>
+</footer>
+  <!-- ═══════════════════════════════════════════════════════════════════
+       JAVASCRIPT - SCROLL ANIMATIONS
+  ═══════════════════════════════════════════════════════════════════ -->
+  <script>
+    // Intersection Observer pour les animations au scroll
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observer tous les éléments avec la classe reveal-on-scroll
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Scroll smooth pour les ancres
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+<script>
+    // ═══════════════════════════════════════════════════════════════════
+// MENU BURGER (si nécessaire pour mobile)
+// ═══════════════════════════════════════════════════════════════════
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (!burger || !navLinks) return;
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+});
+  </script>
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Retour en haut">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+<script>
+// ═══════════════════════════════════════════════════════════════════
+// BOUTON RETOUR EN HAUT — Logique JavaScript
+// ═══════════════════════════════════════════════════════════════════
+
+(function() {
+  'use strict';
+
+  // ═══════════════════════════════════════════════════════════════
+  // CONFIGURATION
+  // ═══════════════════════════════════════════════════════════════
+  
+  const CONFIG = {
+    // Seuil de déclenchement : afficher le bouton après 300px de scroll
+    scrollThreshold: 300,
+    
+    // Durée du scroll animé (ms)
+    scrollDuration: 800,
+    
+    // Fonction d'easing pour le scroll (courbe de bezier personnalisée)
+    easingFunction: (t) => t < 0.5 
+      ? 4 * t * t * t 
+      : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
+  };
+
+  // ═══════════════════════════════════════════════════════════════
+  // SÉLECTION DES ÉLÉMENTS DOM
+  // ═══════════════════════════════════════════════════════════════
+  
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  // Vérification de l'existence du bouton
+  if (!scrollToTopBtn) {
+    console.warn('Bouton scroll-to-top introuvable. Vérifiez que l\'ID est correct.');
+    return;
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FONCTION : Afficher/Masquer le bouton selon le scroll
+  // ═══════════════════════════════════════════════════════════════
+  
+  function toggleButtonVisibility() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollPosition > CONFIG.scrollThreshold) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FONCTION : Scroll fluide vers le haut (natif avec fallback custom)
+  // ═══════════════════════════════════════════════════════════════
+  
+  function smoothScrollToTop() {
+    // Méthode moderne (supportée par la plupart des navigateurs récents)
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // Fallback : animation personnalisée pour navigateurs anciens
+      customSmoothScroll();
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // FONCTION : Animation personnalisée de scroll (fallback)
+  // ═══════════════════════════════════════════════════════════════
+  
+  function customSmoothScroll() {
+    const startPosition = window.pageYOffset;
+    const startTime = performance.now();
+    
+    function animation(currentTime) {
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / CONFIG.scrollDuration, 1);
+      const easing = CONFIG.easingFunction(progress);
+      
+      window.scrollTo(0, startPosition * (1 - easing));
+      
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    }
+    
+    requestAnimationFrame(animation);
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // EVENT LISTENERS
+  // ═══════════════════════════════════════════════════════════════
+  
+  // Détection du scroll avec throttle pour performance
+  let scrollTimeout;
+  window.addEventListener('scroll', function() {
+    if (scrollTimeout) {
+      window.cancelAnimationFrame(scrollTimeout);
+    }
+    
+    scrollTimeout = window.requestAnimationFrame(function() {
+      toggleButtonVisibility();
+    });
+  }, { passive: true });
+
+  // Clic sur le bouton
+  scrollToTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    smoothScrollToTop();
+  });
+
+  // ═══════════════════════════════════════════════════════════════
+  // INITIALISATION
+  // ═══════════════════════════════════════════════════════════════
+  
+  // Vérifier la position initiale au chargement
+  toggleButtonVisibility();
+
+  // Accessibilité : support clavier
+  scrollToTopBtn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      smoothScrollToTop();
+    }
+  });
+
+})();
+</script>
+    <script src="mobile.js"></script>
+</body>
+</html>
